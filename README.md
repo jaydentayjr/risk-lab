@@ -49,7 +49,7 @@ risk_engine/
 outputs/                  # curated example outputs
 docs/                     # figures used in README
 requirements.txt
-
+```
 ## Quickstart
 Create and activate a virtual environment:
 
@@ -57,7 +57,7 @@ Create and activate a virtual environment:
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-
+```
 ## Core workflow
 Run the full risk pipeline in order:
 ```powershell
@@ -79,10 +79,10 @@ python -m risk_engine.run_stress_replay
 # 6) Monte Carlo stress simulation
 python -m risk_engine.run_mc_stress
 python -m risk_engine.run_mc_es_attribution
-
+```
 
 ## Visual diagnostics
-Generate key plots used for analysis and reporting
+Generate key plots used for analysis and reporting:
 ```powershell
 python -m risk_engine.visualize_rolling_es
 python -m risk_engine.visualize_rolling_component_es
