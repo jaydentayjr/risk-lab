@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Large generated artifacts / scratch
+mc_stress_losses_sample.csv
+
+# Generated outputs (we will curate into /outputs)
+*.csv
+
+# But keep curated examples
+!outputs/*.csv
+
+# Keep docs images
+docs/*.png
