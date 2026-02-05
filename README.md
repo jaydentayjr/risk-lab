@@ -36,6 +36,7 @@ Risk driver ordering is robust across models; fat tails materially increase loss
 ---
 
 ## Repository structure
+
 ```text
 risk_engine/
   attribution/            # ES attribution logic
@@ -49,12 +50,7 @@ outputs/                  # curated example outputs
 docs/                     # figures used in README
 requirements.txt
 
----
-
 ## Quickstart
-
-> Windows / PowerShell
-
 Create and activate a virtual environment:
 
 ```powershell
@@ -62,12 +58,8 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 
----
-
 ## Core workflow
-
 Run the full risk pipeline in order:
-
 ```powershell
 # 1) Static VaR / ES report
 python -m risk_engine.run_var_report
@@ -88,26 +80,12 @@ python -m risk_engine.run_stress_replay
 python -m risk_engine.run_mc_stress
 python -m risk_engine.run_mc_es_attribution
 
----
-
-## How to add Visual diagnostics (Markdown example)
-
-Paste **after Core workflow**:
-
-```markdown
----
 
 ## Visual diagnostics
-
-Generate key plots used for analysis and reporting:
-
+Generate key plots used for analysis and reporting
 ```powershell
 python -m risk_engine.visualize_rolling_es
 python -m risk_engine.visualize_rolling_component_es
 python -m risk_engine.visualize_mc_es_share
 python -m risk_engine.visualize_stress_equity_vs_es
 
-
-```markdown
-### Monte Carlo ES share by asset
-![MC ES Share](docs/mc_es_share.png)
